@@ -15,7 +15,7 @@ public class Main {
             final var parser = TextParser.createTextParser(args[0]);
             System.out.printf("The text is:\n%s\n\n%s\n", parser.getText(), parser.getTextStats());
 
-            System.out.print("Enter the score you want to calculate (ARI, FK, SMOG, CL, all): ");
+            System.out.println("Enter the score you want to calculate (ARI, FK, SMOG, CL, all): ");
             var avgAge = getAlgorithms().stream()
                     .map(algorithm -> algorithm.calculate(parser.getTextStats()))
                     .peek(System.out::println)
